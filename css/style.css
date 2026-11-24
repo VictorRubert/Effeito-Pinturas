@@ -1,0 +1,260 @@
+:root {
+  --cinza-escuro: #1b1e23;
+  --cinza-medio: #2b2f36;
+  --amarelo: #f5b400;
+  --amarelo-escuro: #d99e00;
+  --texto-claro: #f4f5f7;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #24262b;
+  background-color: #fdfdfc;
+}
+
+h1, h2, h3, h4, .navbar-brand, .display-lugar {
+  font-family: 'Arial', sans-serif;
+  letter-spacing: .5px;
+}
+
+.text-amarelo { color: var(--amarelo) !important; }
+.bg-cinza-escuro { background-color: var(--cinza-escuro) !important; }
+.bg-cinza-medio { background-color: var(--cinza-medio) !important; }
+.btn-amarelo {
+  background-color: var(--amarelo);
+  border-color: var(--amarelo);
+  color: #1b1e23;
+  font-weight: 600;
+}
+.btn-amarelo:hover {
+  background-color: var(--amarelo-escuro);
+  border-color: var(--amarelo-escuro);
+  color: #1b1e23;
+}
+.btn-outline-amarelo {
+  border-color: var(--amarelo);
+  color: var(--amarelo);
+  font-weight: 600;
+}
+.btn-outline-amarelo:hover {
+  background-color: var(--amarelo);
+  color: #1b1e23;
+}
+
+/* Navbar */
+.navbar-effeito {
+  background-color: var(--cinza-escuro);
+}
+.navbar-effeito .navbar-brand img {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+}
+.navbar-effeito .nav-link {
+  color: #d8dadd;
+  font-weight: 500;
+}
+.navbar-effeito .nav-link:hover,
+.navbar-effeito .nav-link.active {
+  color: var(--amarelo);
+}
+
+/* Hero / Carousel */
+.hero-carousel .carousel-item {
+  height: 78vh;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+}
+.hero-carousel .carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(27,30,35,.55) 0%, rgba(27,30,35,.85) 100%);
+}
+.hero-carousel .banner-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-carousel .carousel-caption {
+  z-index: 2;
+  bottom: 12%;
+  text-align: left;
+  left: 6%;
+  right: 6%;
+  max-width: 640px;
+}
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+  width: 48px;
+  opacity: 1;
+  z-index: 3;
+}
+.hero-carousel .carousel-control-prev {
+  left: 10px;
+}
+.hero-carousel .carousel-control-next {
+  right: 10px;
+}
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+}
+.hero-carousel .carousel-caption .slogan {
+  font-size: 1rem;
+  color: var(--amarelo);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-carousel .carousel-caption h1 {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 700;
+}
+
+/* Section titles */
+.titulo-secao {
+  position: relative;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.titulo-secao::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--amarelo);
+}
+.titulo-secao.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Service cards */
+.card-servico {
+  border: none;
+  border-radius: .6rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  height: 100%;
+}
+.card-servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.14);
+}
+.card-servico img {
+  height: 220px;
+  object-fit: cover;
+  object-position: center 75%;
+}
+.card-servico .preco {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--cinza-escuro);
+}
+
+/* Empresa section */
+.empresa-map iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: .5rem;
+}
+.equipe-avatar img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--amarelo);
+}
+
+/* Depoimentos */
+.card-depoimento {
+  border: none;
+  border-radius: .6rem;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.07);
+  height: 100%;
+}
+.card-depoimento .bi-person-circle {
+  font-size: 2.4rem;
+  color: var(--cinza-medio);
+}
+.card-depoimento .estrelas {
+  color: var(--amarelo);
+  font-size: .85rem;
+}
+
+/* Contato */
+.contato-info-card {
+  background: var(--cinza-escuro);
+  color: var(--texto-claro);
+  border-radius: .6rem;
+}
+.contato-info-card a {
+  color: var(--texto-claro);
+  text-decoration: none;
+}
+.contato-info-card a:hover { color: var(--amarelo); }
+.contato-info-card .bi { color: var(--amarelo); }
+
+/* WhatsApp floating button */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 1050;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,.3);
+}
+.whatsapp-flutuante:hover { color: #fff; filter: brightness(1.08); }
+
+/* Footer */
+footer {
+  background-color: var(--cinza-escuro);
+  color: #c7c9cc;
+}
+footer a { color: #c7c9cc; }
+footer a:hover { color: var(--amarelo); }
+
+/* Service detail pages */
+.pagina-servico-hero {
+  background-color: var(--cinza-escuro);
+  color: #fff;
+}
+.galeria-servico img {
+  border-radius: .5rem;
+  object-fit: cover;
+  height: 260px;
+  width: 100%;
+}
+.video-responsivo {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+.video-responsivo iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.ficha-servico dt { color: #6c6f75; font-weight: 500; }
+.ficha-servico dd { margin-bottom: .8rem; font-weight: 600; }
